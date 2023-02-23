@@ -13,22 +13,21 @@ function InputArea(props){
 
   return(
     <div className="form">
+    {/* calls the handleChange function */}
       <input
-      // calls the handleChange function
       onChange={handleChange}
       type="text"
       value={itemText}
       />
-      <button
-      // when the button is pressed onClick calls a function.
-      // That function then calls the addItem function in App.jsx which adds
-      // the item to the list items in App.jsx
-      //
-      // then we setItem text to an empty string to clear the Add field
+      {/* when the button is pressed onClick calls a function.  */}
+      {/*That function then calls the addItem function in App.jsx which adds  */}
+      {/*the item to the list items in App.jsx  */}
+      {/*then we setItem text to an empty string to clear the Add field  */}
 
+      {/* sending the new item to add via itemText which will be received */}
+      {/* in addItem(inputText) function */}
+      <button
         onClick={ () => {
-        // sending the new item to add via itemText which will be received
-        // in addItem(inputText) function
         props.onAdd(itemText);
         setItemText("");
       }}>

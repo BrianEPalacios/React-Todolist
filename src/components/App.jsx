@@ -31,13 +31,14 @@ function App(props) {
   return (
     <div className="container">
       <Header />
+      { /* allows us to send the function addItem through props to InputArea.jsx */ }
       <InputArea
-      // allows us to send the function addItem through props to InputArea.jsx
+
       onAdd={addItem}
       />
       <div>
         <ul>
-        // creates a new list/ToDoItem for every entry
+        { /* creates a new list/ToDoItem for every entry */ }
           {items.map((item, index) => <ToDoItem
             key={index}
             id={index}
